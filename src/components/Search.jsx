@@ -10,19 +10,19 @@ export default function Search({
     <div className="relative md:flex justify-between mt-6 mx-6 md:mx-20 md:mt-12">
       <div>
         <input
-          className="h-12 w-full md:w-96 rounded bg-DarkBlue text-white placeholder-white pl-14"
+          className="h-12 w-full md:w-96 rounded dark:bg-DarkBlue dark:text-white  bg-VeryLightGray placeholder-DarkGray pl-14"
           type="text"
           placeholder="Search for a country..."
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
         />
         <div className="absolute left-5 top-4">
-          <AiOutlineSearch className="text-white" />
+          <AiOutlineSearch className="dark:text-white DarkGray" />
         </div>
       </div>
       <div className="mt-12 md:mt-0 md:w-72">
         <select
-          className="h-12 w-2/3 rounded bg-DarkBlue text-white px-6 md:ml-24"
+          className="h-12 w-2/3 rounded dark:bg-DarkBlue dark:text-white  bg-VeryLightGray  px-6 md:ml-24"
           name="country"
           id="country"
           value={regionFilter}

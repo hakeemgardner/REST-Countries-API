@@ -11,6 +11,7 @@ function App() {
   const [initialCountries, setInitialCountries] = useState([]);
   const [searchInput, setSearchInput] = useState("");
   const [regionFilter, setRegionFilter] = useState("all");
+  const [theme, setTheme] = useState("light");
 
   const fetchCountries = async (setCountries) => {
     try {
@@ -21,6 +22,18 @@ function App() {
     } catch (error) {
       console.error("Error fetching countries:", error);
     }
+  };
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const handleThemeSwitch = () => {
+    setTheme(theme === "dark" ? "light" : "dark"); // Change ":light" to "dark"
   };
 
   useEffect(() => {
@@ -47,8 +60,8 @@ function App() {
   };
 
   return (
-    <div className="font-Nunito bg-VeryDarkerBlue">
-      <Navbar />
+    <div className="font-Nunito dark:bg-VeryDarkerBlue bg:white">
+      <Navbar handleThemeSwitch={handleThemeSwitch} />
       <Routes>
         <Route
           path="/"

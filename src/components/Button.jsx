@@ -4,7 +4,7 @@ export default function Button(props) {
   const { buttonText, alternateClass, customClick } = props;
 
   // Define a class string that includes the base button class and the alternate class if provided
-  const buttonClass = `bg-DarkBlue text-white md:px-12 py-2 text-center inline-block font-light ${alternateClass}`;
+  const buttonClass = `dark:bg-DarkBlue dark:text-white bg-VeryLightGray text-VeryDarkBlue md:px-12 py-2 text-center inline-block font-light ${alternateClass}`;
 
   return (
     <div>

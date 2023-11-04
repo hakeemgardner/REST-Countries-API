@@ -4,7 +4,7 @@ export default function Cards(props) {
   const { imgSrc, countryName, population, region, capital } = props;
   return (
     <div className="md:mx-8 cursor-pointer  ">
-      <div className="bg-DarkBlue my-6 text-white mx-12 rounded w-64 h-96">
+      <div className="dark:bg-DarkBlue dark:text-white bg-VeryLightGray text-VeryDarkBlue my-6  mx-12 rounded w-64 h-96">
         <img className="rounded-t-lg md:w-full" src={imgSrc} alt="" />
         <div className="m-6 text">
           <h2 className="font-bold text-xl mb-3">{countryName}</h2>

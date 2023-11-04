@@ -27,7 +27,7 @@ export default function CountryDetails(props) {
   };
 
   return (
-    <div className="mt-8 mx-8 text-white md:flex justify-between md:mt-20 md:mx-20">
+    <div className="mt-8 mx-8 dark:text-white text-VeryDarkBlue md:flex justify-between md:mt-20 md:mx-20">
       <div className="md:w-1/2">
         <Button
           customClick={handleBackClick}
